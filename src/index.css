@@ -1,13 +1,162 @@
-body {
+*,
+::after,
+::before {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+html {
+  font-size: 100%;
+}
+:root {
+  /* dark shades of base color*/
+  --clr-green-base-color-1: hsl(161, 59%, 31%);
+  --clr-green-base-color-2: hsl(162, 59%, 34%);
+  --clr-green-base-color-3: hsl(161, 59%, 37%);
+  --clr-green-base-color-4: hsl(161, 59%, 39%);
+
+  /* primary/main color */
+  --clr-green-base-color: hsl(161, 77%, 56%);
+
+  /* lighter shades of base color */
+  --clr-green-base-color-5: hsl(161, 77%, 76%);
+  --clr-green-base-color-6: hsl(162, 77%, 78%);
+  --clr-green-base-color-7: hsl(161, 76%, 80%);
+  --clr-green-base-color-8: hsl(161, 77%, 83%);
+  --clr-green-base-color-9: hsl(161, 77%, 85%);
+
+  /* grey base color */
+  --clr-grey-base-color: hsl(203, 13%, 88%);
+
+  /* darkest grey - used for headings */
+  --clr-grey-base-color-1: hsl(180, 2%, 22%);
+  --clr-grey-base-color-2: hsl(200, 2%, 26%);
+  --clr-grey-base-color-3: hsl(200, 2%, 31%);
+  --clr-grey-base-color-4: hsl(210, 2%, 35%);
+
+  /* grey used for paragraphs */
+  --clr-grey-base-color-5: hsl(204, 3%, 62%);
+  --clr-grey-base-color-6: hsl(206, 7%, 79%);
+  --clr-grey-base-color-7: hsl(202, 10%, 84%);
+  --clr-grey-base-color-8: hsl(206, 6%, 75%);
+  --clr-grey-base-color-9: hsl(206, 7%, 79%);
+  --clr-grey-base-color-10: hsl(202, 10%, 84%);
+  --clr-grey-base-color-11: hsl(206, 26%, 95%);
+
+  --clr-white: #ffffff;
+  --clr-black: #222222;
+
+  --transition: all 0.3s linear;
+  --transition2: 0.3s ease-in-out all;
+  --spacing: 0.1rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  --max-width: 1170px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--clr-grey-base-color-11);
+  color: var(--clr-grey-base-color-1);
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 0.875rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  font-weight: 400;
+  margin-bottom: 0.75rem;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+  color: var(--clr-green-base-color-5);
+}
+/* buttons */
+.container {
+  display: flex;
+}
+.btn {
+  /* temp */
+  margin: 0 auto;
+  /* config */
+  cursor: pointer;
+  color: var(--clr-green-base-color-9);
+  background-color: var(--clr-green-base-color-4);
+  font-weight: 600;
+  border: transparent;
+  border-radius: 0.25rem;
+  letter-spacing: var(--spacing);
+  padding: 0.375rem 0.75rem;
+  box-shadow: var(--light-shadow);
+  transition: var(--transition);
+  display: inline-block;
+}
+.btn:hover {
+  background-color: var(--clr-green-base-color-5);
+  color: var(--clr-green-base-color-3);
+  box-shadow: var(--light-shadow);
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+.app {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+.app__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  justify-content: space-between;
 }

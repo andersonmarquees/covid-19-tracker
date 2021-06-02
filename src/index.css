@@ -19,14 +19,14 @@ html {
   --clr-green-base-color-4: hsl(161, 59%, 39%);
 
   /* primary/main color */
-  --clr-green-base-color: hsl(161, 77%, 56%);
+  --clr-green-base-color: #38e5ae;
 
   /* lighter shades of base color */
   --clr-green-base-color-5: hsl(161, 77%, 76%);
   --clr-green-base-color-6: hsl(162, 77%, 78%);
   --clr-green-base-color-7: hsl(161, 76%, 80%);
   --clr-green-base-color-8: hsl(161, 77%, 83%);
-  --clr-green-base-color-9: hsl(161, 77%, 85%);
+  --clr-green-base-color-9: hsl(162, 77%, 85%);
 
   /* grey base color */
   --clr-grey-base-color: hsl(203, 13%, 88%);
@@ -59,7 +59,8 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: var(--clr-grey-base-color-11);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./images/mapa-mundi.jpg") center/cover no-repeat fixed;
   color: var(--clr-grey-base-color-1);
   font-weight: 400;
   line-height: 1.5;
@@ -105,9 +106,6 @@ p {
   display: flex;
 }
 .btn {
-  /* temp */
-  margin: 0 auto;
-  /* config */
   cursor: pointer;
   color: var(--clr-green-base-color-9);
   background-color: var(--clr-green-base-color-4);
@@ -155,8 +153,16 @@ p {
   padding: 20px;
 }
 .app__header {
+  width: 100%;
+  max-width: 900px;
   display: flex;
   align-items: center;
   margin-bottom: 20px;
   justify-content: space-between;
+  border: 1px solid red;
+}
+.app__header > h1 {
+  color: #e5376e;
+  font-size: 2rem;
+  font-weight: 700;
 }
